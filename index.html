@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todrich International LTD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- ========== HEADER / NAVBAR (modern, with working dropdown) ========== -->
+<section id="header">
+  <a href="#" class="logo">Todrich<span>International</span></a>
+  <div>
+    <ul id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown-trigger">
+        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="#">Frontend Web Development</a></li>
+          <li><a href="#">Backend Web Development</a></li>
+          <li><a href="#">Fullstack</a></li>
+          <li><a href="#">Mobile App</a></li>
+          <li><a href="#">Product Design</a></li>
+          <li><a href="#">Data Science & AI</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Career Support</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <!-- Mobile menu toggle button (hamburger) -->
+    <div class="mobile-menu-icon" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HERO SECTION (modern, clean, readable) ========== -->
+<section id="hero">
+  <div class="hero-container">
+    <h1>Your Tech Career <br> Starts Here..</h1>
+    <p class="hero-subtitle">
+      > Learn practical skills, build a portfolio, and get hired
+    </p>
+    <p class="hero-tagline">No experience needed. Real projects. Real results.</p>
+    <button class="btn-primary">Start Your Journey →</button>
+  </div>
+
+</section>
+
+<section id="feature" class="section-p1">
+  <div class="fe-box">
+    <div class="icon-circle">
+      <i class="fas fa-mobile-alt"></i>
+    </div>
+    <h6>Create Responsive Mobile App</h6>
+    <p>Build modern apps that work on any device</p>
+  </div>
+  <div class="fe-box">
+    <div class="icon-circle">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <h6>Earn More & Save Enough</h6>
+    <p>High-demand skills lead to better income</p>
+  </div>
+  <div class="fe-box">
+    <div class="icon-circle">
+      <i class="fas fa-smile-beam"></i>
+    </div>
+    <h6>Happy Living</h6>
+    <p>Work-life balance with fulfilling career</p>
+  </div>
+  <div class="fe-box">
+    <div class="icon-circle">
+      <i class="fas fa-briefcase"></i>
+    </div>
+    <h6>Career Support</h6>
+    <p>Resume, interview prep & job placement</p>
+  </div>
+</section>
+
+    <section id="courses">
+  <div class="courses-header">
+    <h2>Our <span>bootcamps</span> prepare you to succeed in tech and beyond</h2>
+    <p>Industry‑aligned programs — online, flexible, and career‑focused.</p>
+  </div>
+  <div class="courses-grid">
+    <!-- Card 1 -->
+    <div class="course-card">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+          <source src="img/fullstack-dev.mp4" type="video/mp4">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="card-content">
+          <h3>Fullstack Development</h3>
+          <p>HTML, CSS, React, Python, Django, SQL – complete web apps.</p>
+          <div class="card-meta">
+            <span>12 weeks</span>
+            <span>Mentorship</span>
+          </div>
+          <a href="#" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="course-card">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+          <source src="img/frontend-dev.mp4" type="video/mp4">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="card-content">
+          <h3>Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, React – build responsive UIs.</p>
+          <div class="card-meta">
+            <span>10 weeks</span>
+            <span>Project‑based</span>
+          </div>
+          <a href="#" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="course-card">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+          <source src="img/backend-dev.mp4" type="video/mp4">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="card-content">
+          <h3>Backend Development</h3>
+          <p>Python, Django, Node.js, Express, databases.</p>
+          <div class="card-meta">
+            <span>10 weeks</span>
+            <span>API focus</span>
+          </div>
+          <a href="#" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="course-card">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+          <source src="img/mobile-app-dev.mp4" type="video/mp4">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="card-content">
+          <h3>Mobile Development</h3>
+          <p>React Native, Flutter – cross‑platform iOS/Android apps.</p>
+          <div class="card-meta">
+            <span>12 weeks</span>
+            <span>App store ready</span>
+          </div>
+          <a href="#" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="course-card">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+          <source src="img/data-analysis.mp4" type="video/mp4">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="card-content">
+          <h3>Data Science & AI</h3>
+          <p>Python, Pandas, ML, AI fundamentals.</p>
+          <div class="card-meta">
+            <span>14 weeks</span>
+            <span>AI projects</span>
+          </div>
+          <a href="#" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="course-card">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+          <source src="img/cyber.mp4" type="video/mp4">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="card-content">
+          <h3>Cybersecurity</h3>
+          <p>Ethical hacking, network defense, risk management.</p>
+          <div class="card-meta">
+            <span>12 weeks</span>
+            <span>Certification prep</span>
+          </div>
+          <a href="#" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="courses-footer">
+    <a href="#" class="btn-outline">View all programs →</a>
+  </div>
+</section>
+
+
+<section id="stats">
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-number" data-target="92%">92%</div>
+      <p class="stat-label">Job Placement Rate</p>
+      <span class="stat-detail">Within 6 months of graduation</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="500+">500+</div>
+      <p class="stat-label">Students Trained</p>
+      <span class="stat-detail">And counting across 3 countries</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="30+">30+</div>
+      <p class="stat-label">Industry Partners</p>
+      <span class="stat-detail">Top tech companies hiring our grads</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" data-target="4.8">4.8</div>
+      <p class="stat-label">Student Rating</p>
+      <span class="stat-detail">Out of 5 – 500+ reviews</span>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- ========== ADVERT CARDS SECTION (with background images) ========== -->
+<section id="advert-cards" class="section-p1">
+  <div class="cards-container">
+    <!-- Card 1: Tech School -->
+    <div class="advert-card tech-advert">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <span class="card-tag">📚 Launch Your Tech Career</span>
+        <h3>Coding Bootcamp</h3>
+        <p>Full-stack, Cybersecurity, Data Science – hands-on training with job placement.</p>
+        <button class="card-btn tech-btn">Explore Courses →</button>
+      </div>
+    </div>
+
+    <!-- Card 2: Travel Agency -->
+    <div class="advert-card travel-advert">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <span class="card-tag">✈️ Global Opportunities</span>
+        <h3>Travel & Jobs Abroad</h3>
+        <p>Visa assistance, work permits, study abroad – we get you there.</p>
+        <button class="card-btn travel-btn">Get Consultation →</button>
+      </div>
+    </div>
+
+    <!-- Card 3: Farm Business -->
+    <div class="advert-card farm-advert">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <span class="card-tag">🌱 Fresh from the Farm</span>
+        <h3>Farm Business</h3>
+        <p>Organic produce, farm tours, wholesale – straight to your table.</p>
+        <button class="card-btn farm-btn">Shop Fresh →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="newsletter" class="section-p1">
+  <div class="newstext">
+    <h4>Stay Ahead in Tech, Travel & Farming</h4>
+    <p>Subscribe to get updates on <span>new courses, travel deals, and farm fresh produce.</span></p>
+  </div>
+  <div class="form">
+    <div class="input-group">
+      <i class="fas fa-envelope"></i>
+      <input type="email" placeholder="Your email address" required>
+    </div>
+    <button class="normal">Subscribe →</button>
+  </div>
+</section>
+
+
+<section id="contact-cta" class="section-p1">
+  <div class="cta-container">
+    <div class="cta-image">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600" alt="Team meeting">
+    </div>
+    <div class="cta-content">
+      <h2>Ready to start your journey?</h2>
+      <p>Talk to our team today — whether it's about tech courses, travel opportunities, or fresh farm produce, we're here to help.</p>
+      <div class="cta-buttons">
+        <a href="#appointmentModal" class="btn-primary">📞 Book an Appointment</a>
+        <a href="https://wa.me/2347016959579?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="btn-outline">
+  💬 Chat with Us on WhatsApp
+</a>
+      </div>
+      <div class="cta-contact-info">
+        <span><i class="fas fa-phone-alt"></i> +234 801 234 5678</span>
+        <span><i class="fas fa-envelope"></i> hello@todrich.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal (popup form) -->
+<div id="appointmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Book an Appointment</h3>
+    <p>Fill in your details and we'll get back to you within 24 hours.</p>
+    <form id="appointmentForm">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="phone" placeholder="Phone Number">
+      </div>
+      <div class="form-group">
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option value="tech">Coding Bootcamp – Courses</option>
+          <option value="travel">Travel & Jobs Abroad</option>
+          <option value="farm">Farm Business – Produce</option>
+          <option value="general">General Inquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea rows="3" placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Request →</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<footer class="section-p1">
+  <div class="footer-container">
+    <!-- Column 1: Contact & Social -->
+    <div class="footer-col">
+      <h3>Todrich<span>international</span></h3>
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> 123 Tech Hub, Lagos, Nigeria</p>
+      <p><strong>Phone:</strong> +234 801 234 5678</p>
+      <p><strong>Hours:</strong> Mon-Fri: 9am - 6pm WAT</p>
+      <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2: Tech School Links -->
+    <div class="footer-col">
+      <h4>Coding Bootcamp</h4>
+      <a href="#">Courses</a>
+      <a href="#">Cybersecurity Program</a>
+      <a href="#">Fullstack Bootcamp</a>
+      <a href="#">Career Support</a>
+      <a href="#">Student Success</a>
+    </div>
+
+    <!-- Column 3: Travel & Jobs -->
+    <div class="footer-col">
+      <h4>Travel & Jobs</h4>
+      <a href="#">Visa Assistance</a>
+      <a href="#">Job Placement Abroad</a>
+      <a href="#">Study Abroad</a>
+      <a href="#">Travel Packages</a>
+      <a href="#">Free Consultation</a>
+    </div>
+
+    <!-- Column 4: Farm Business -->
+    <div class="footer-col">
+      <h4>Farm Business</h4>
+      <a href="#">Fresh Produce</a>
+      <a href="#">Farm Tours</a>
+      <a href="#">Wholesale Supply</a>
+      <a href="#">Seasonal Offers</a>
+      <a href="#">Contact Farm</a>
+    </div>
+
+    <!-- Column 5: Legal & About -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2025 UncleGroup – Empowering Tech, Travel & Agriculture. All rights reserved.</p>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

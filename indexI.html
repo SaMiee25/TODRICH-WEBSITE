@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Test</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 200vh; /* makes page scrollable */
+      background: linear-gradient(white, #ccc);
+    }
+
+    /* HERO SECTION (to see transparent effect) */
+    .hero {
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    /* ========== NAVBAR ========== */
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: transparent; /* initial transparent */
+    }
+
+    /* Dark background class – will be added by JS on scroll */
+    #header.dark-bg {
+      background-color: #0f172a !important;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      background: linear-gradient(135deg, #f39c12, #e67e22);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    #navbar {
+      display: flex;
+      list-style: none;
+      gap: 0.5rem;
+    }
+    #navbar li {
+      position: relative;
+    }
+    #navbar li a {
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      font-weight: 600;
+      color: white;
+      border-radius: 2rem;
+      transition: 0.2s;
+      display: inline-block;
+    }
+    #navbar li a:hover {
+      background: rgba(255,255,255,0.2);
+      color: #facc15;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background: #1e293b;
+      border-radius: 1rem;
+      padding: 0.5rem 0;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: 0.2s;
+      list-style: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .dropdown-trigger:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown li a {
+      display: block;
+      padding: 0.5rem 1.2rem;
+      color: #e2e8f0;
+      border-radius: 0;
+    }
+    .dropdown li a:hover {
+      background: #334155;
+      color: #facc15;
+    }
+
+    /* Mobile */
+    .mobile-menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+    @media (max-width: 850px) {
+      .mobile-menu-icon {
+        display: block;
+      }
+      #navbar {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: #0f172a;
+        width: 75%;
+        height: calc(100vh - 70px);
+        padding: 2rem;
+        transition: 0.3s;
+      }
+      #navbar.active {
+        left: 0;
+      }
+      .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: #1e293b;
+        margin-top: 0.5rem;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="header">
+    <a href="#" class="logo">Todrich<span>International</span></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown-trigger">
+          <a href="#">Courses <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="#">Frontend</a></li>
+            <li><a href="#">Backend</a></li>
+            <li><a href="#">Fullstack</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Career Support</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-icon" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero">
+    <h1>Scroll Down → Navbar Turns Dark</h1>
+  </div>
+
+  <script>
+    // ========== SCROLL EVENT – CHANGE NAVBAR BACKGROUND ==========
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('dark-bg');
+      } else {
+        header.classList.remove('dark-bg');
+      }
+    });
+
+    // ========== MOBILE MENU TOGGLE ==========
+    var mobileBtn = document.getElementById('mobileMenuBtn');
+    var navbar = document.getElementById('navbar');
+    if (mobileBtn && navbar) {
+      mobileBtn.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        var icon = mobileBtn.querySelector('i');
+        if (navbar.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
